@@ -19,9 +19,12 @@ ____
 
 ____
 
-Рабочий сайт приложения "NewsExplorer", размещен на Яндекс.Облаке по адресу: https
-Публичный адрес IPv4 
+Рабочий сайт приложения "NewsExplorer", будет размещен на Яндекс.Облаке по адресу: https://allnews.students.nomoreparties.xyz
 
-Репозиторий Backend: https
+Backend: https://api.allnews.students.nomoreparties.xyz
 
-Репозиторий Frontend: https
+Публичный адрес IPv4: 178.154.230.63
+
+Репозиторий Backend (news-explorer-api): https://github.com/Sergey-Denisenko/news-explorer-api.git ветка level-1
+
+Репозиторий Frontend (news-explorer-frontend): https://github.com/Sergey-Denisenko/news-explorer-frontend.git

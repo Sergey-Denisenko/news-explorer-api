@@ -10,12 +10,12 @@ const { rateLimiter } = require('./middlewares/rate-limiter'); // огранич
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { routes } = require('./routes/index');
 const { errorHandler } = require('./middlewares/error-handler');
+const { MONGODB_URI } = require('./config');
 
 const { PORT = 3000 } = process.env; // слущаю порт
 
-const { NODE_ENV, MONGODB_URI } = process.env;
 // mongoose.connect('mongodb://localhost:27017/newsexplorer', { // подключаюсь к серверу mongo
-mongoose.connect(NODE_ENV === 'production' ? MONGODB_URI : 'mongodb://localhost:27017/newsexplorer', { // подключаюсь к серверу mongo
+mongoose.connect(MONGODB_URI, { // подключаюсь к серверу mongo
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,

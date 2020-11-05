@@ -33,7 +33,7 @@ const createArticle = (req, res, next) => {
 const deleteArticleById = (req, res, next) => {
   Article.find({ owner: req.user._id })
     .select('+owner')
-    .orFail(new NotFoundError('Not Found / Статьи у текущего пользователя не найдены')) // 404
+    .orFail(new NotFoundError('Not Found / У текущего пользователя такая статья не найдена')) // 404
     .then(() => {
       Article.findByIdAndRemove({ _id: req.params.articleId })
         .orFail(new NotFoundError('Not Found / Статьи с таким Id не найдено')) // 404

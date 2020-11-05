@@ -1,6 +1,6 @@
 const { celebrate, Joi } = require('celebrate'); // Ваидация входящих запросов
 
-const urlRegex = /^(https?:\/\/)([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?#?$/;
+const urlRegex = /^(https?:\/\/)([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?#?$/;
 
 const validationSignup = celebrate({
   body: Joi.object().keys({

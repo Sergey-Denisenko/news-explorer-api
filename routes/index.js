@@ -11,8 +11,8 @@ routes.post('/signup', validationSignup, createUser); // Запуск createUser
 routes.post('/signin', validationSignin, login); // Запуск login с валидацией
 
 routes.use(auth);
-routes.use('/users', meRouter);// Запуск meRouter с авторизацией
-routes.use('/articles', articlesRouter);// Запуск articlesRouter с авторизацией
+routes.use('/users', meRouter);// Запуск meRouter
+routes.use('/articles', articlesRouter);// Запуск articlesRouter
 routes.use(unknownPageRouter); // Запуск unknownPageRouter / Запрос неизвестного адреса на сервере
 
 module.exports = { routes };
