@@ -1,6 +1,7 @@
 const Article = require('../models/article');
 const BadRequestError = require('../errors/bad-requet-error'); // 400
 const NotFoundError = require('../errors/not-found-err'); // 404
+const ForbiddenError = require('../errors/forbidden-error');
 
 const getAllArticles = (req, res, next) => {
   Article.find({ owner: req.user._id }).select('+owner')
@@ -31,16 +32,19 @@ const createArticle = (req, res, next) => {
 };
 
 const deleteArticleById = (req, res, next) => {
-  Article.find({ owner: req.user._id })
+  Article.findById({ _id: req.params.articleId })
     .select('+owner')
-    .orFail(new NotFoundError('Not Found / У текущего пользователя такая статья не найдена')) // 404
-    .then(() => {
-      Article.findByIdAndRemove({ _id: req.params.articleId })
-        .orFail(new NotFoundError('Not Found / Статьи с таким Id не найдено')) // 404
-        .then((articleItem) => {
-          res.send(articleItem);
-        })
-        .catch(next);
+    .orFail(new NotFoundError('Not Found / Статьи с таким Id не найдено')) // 404
+    .then((article) => {
+      if (article.owner.toString() === req.user._id) {
+        Article.findByIdAndRemove({ _id: req.params.articleId })
+          .orFail(new ForbiddenError('Forbidden / Невозможно удалить статью')) // 404
+          .then(() => {
+            res.send({ message: 'Статья удалена' });
+          })
+          .catch(next);
+      } else next(new ForbiddenError('Forbidden / Запрещено удалять чужие статьи!'));
+      // });
     })
     .catch(next);
 };
