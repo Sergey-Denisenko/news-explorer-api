@@ -19,9 +19,9 @@ ____
 
 ____
 
-Рабочий сайт приложения "NewsExplorer", будет размещен на Яндекс.Облаке по адресу: https://allnews.students.nomoreparties.xyz
+Рабочий сайт приложения "NewsExplorer", будет размещен на Яндекс.Облаке по адресу: https://allnews.students.nomoreparties.site
 
-Backend: https://api.allnews.students.nomoreparties.xyz
+Backend: https://api.allnews.students.nomoreparties.site
 
 Публичный адрес IPv4: 178.154.230.63
 
