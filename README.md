@@ -8,18 +8,18 @@ ____
 
 ____
 
-*При выполнении проекта используются:*
-:white_check_mark: *язык программирования JavaScript*  
-:white_check_mark: *Node.js*  
-:white_check_mark: *express.js*  
-:white_check_mark: *MongoDB*  
-:white_check_mark: *Сервис Яндекс.Облако*  
-:white_check_mark: *и ряд иных интересных технологий*  
-:white_check_mark: *а так же способность здраво мыслить, структурный подход и творческий потенциал*
+*При выполнении проекта используются:*  
+:white_check_mark: &nbsp; *язык программирования JavaScript*  
+:white_check_mark: &nbsp; *Node.js*  
+:white_check_mark: &nbsp; *express.js*  
+:white_check_mark: &nbsp; *MongoDB*  
+:white_check_mark: &nbsp; *Сервис Яндекс.Облако*  
+:white_check_mark: &nbsp; *и ряд иных интересных технологий*  
+:white_check_mark: &nbsp; *а так же способность здраво мыслить, структурный подход и творческий потенциал*
 
 ____
 
-Рабочий сайт приложения "NewsExplorer", размещен на Яндекс.Облаке по адресу: https://allnews.students.nomoreparties.site
+Рабочий сайт приложения "NewsExplorer" размещен на Яндекс.Облаке по адресу: https://allnews.students.nomoreparties.site
 
 Backend: https://api.allnews.students.nomoreparties.site
 
